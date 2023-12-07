@@ -1,0 +1,43 @@
+.shine-text {
+  background-image: linear-gradient(45deg, rgb(0, 0, 0)rgrgb(0, 0, 0) 0, 0)f0, rgb(0, 0, 0);
+  background-clip: text;
+  color: transparent;
+  animation: shine 1s linear infinite, changeColor 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    color: rgb(119, 119, 119); /* Start with black color */
+  }
+  50% {
+    color: white; /* Change to white after 50% of the animation */
+  }
+  100% {
+    color: rgb(97, 97, 97); /* Return to black at the end of the animation */
+  }
+}
+
+/* Table.css */
+table {
+  width: 100%; /* Adjust the width as needed */
+  font-size: 6px; /* Adjust the font size as needed */
+  border: 1px solid #ccc; /* Add borders or customize as needed */
+}
+
+td {
+  padding: 5px; /* Adjust the padding as needed */
+  text-align: center; /* Center align the text */
+}
+
+tr {
+  height: 10px; /* Adjust the row height as needed */
+}
