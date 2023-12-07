@@ -11,7 +11,6 @@ interface TableProps {
 
 const Table: React.FC<TableProps> = ({ startDate, endDate, join }) => {
   // Calculate the number of days between startDate and endDate
-  const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
   startDate += ":00";
   endDate += ":00";
   const StartDate = new Date(startDate);
@@ -44,7 +43,7 @@ const Table: React.FC<TableProps> = ({ startDate, endDate, join }) => {
     if (j === 0 && i < StartDate.getHours()) {
       return; // Do nothing if clicking the first column and the hour is less than StartDate.getHours()
     }
-    var realHour = EndDate.getHours();
+    let realHour = EndDate.getHours();
     if (realHour == 0)
       realHour += 24;
     if (j === diffDays - 1 && i > realHour - 1) {
@@ -80,7 +79,7 @@ const Table: React.FC<TableProps> = ({ startDate, endDate, join }) => {
       if (j === 0 && i < StartDate.getHours()) {
         cellColor = 'gray'; // Gray out the cell in the first column if the hour is less than StartDate.getHours()
       }
-      var realHour = EndDate.getHours();
+      let realHour = EndDate.getHours();
       if (realHour == 0)
         realHour += 24;
       if (j === diffDays - 1 && i > realHour - 1) {

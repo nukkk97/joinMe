@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface CellProps {
   backgroundColor: string;
@@ -7,7 +7,7 @@ interface CellProps {
   j:number;
 }
 
-const Cell: React.FC<CellProps> = ({ backgroundColor, onClick,i,j }) => {
+const Cell: React.FC<CellProps> = ({ backgroundColor, onClick }) => {
   //const [count, setCount] = useState(0);
 
   const handleCellClick = () => {
